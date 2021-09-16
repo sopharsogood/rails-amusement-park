@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/signin', to: 'users#signin'
   post '/signin', to: 'users#login'
   get '/logout', to: 'users#logout'
+  post '/attraction/:id/ride', to: 'rides#new', as: 'attraction_ride'
 end

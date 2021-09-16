@@ -16,7 +16,6 @@ class Ride < ApplicationRecord
             reasons_rejected_from_ride << "You are not tall enough to ride the #{self.attraction.name}."
         end
         if reasons_rejected_from_ride != ["Sorry."]
-            puts reasons_rejected_from_ride
             reasons_rejected_from_ride.join(" ")
         else
             self.user.tickets -= self.attraction.tickets
